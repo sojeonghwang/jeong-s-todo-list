@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+html {
+  height: 100%;
+
+}
+
+body {
+  background: #D9D9D9;
+  height: 100%;
+  font-family: 'Noto Sans KR' !important;
+}
+
+#root {
+  height: 100%;
+}
+
+.base-lay-out {
+  max-width: 30rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem 1.3rem 0 1.3rem;
+  text-align: center;
+  background: white;
+  border-radius: 0.5rem;
+  height: calc(100% - 1rem);
+}
+
+.date-and-todo-count {
+  text-align: left;
+}
+
+.date-title {
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-top: 1.5rem;
+}
+
+.data-day {
+  margin: 0.5rem 0;
+  color: #757575;
+}
+
+.remain-todo-count {
+  margin-top: 4rem;
+  color: #3DB2E5;
+  font-weight: bold;
+}
+
+.todo-list-ul {
+  text-align: left;
+  margin-top: 3rem;
+}
