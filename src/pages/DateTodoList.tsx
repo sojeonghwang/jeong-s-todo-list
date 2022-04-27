@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoList from '../components/home/TodoList'
 
-const Home = () => {
+const DateTodoList = () => {
     return (
         <div>
             <div className="date-and-todo-count">
@@ -14,4 +14,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default DateTodoList;
