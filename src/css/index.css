@@ -85,3 +85,46 @@ body {
   border: 1px #FDCF00 solid;
   cursor: pointer;
 }
+
+.calendar-header {
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.menu {
+  color: #3DB2E5;
+  font-size: 1.7rem;
+  margin-left: 1rem;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  position: absolute;
+  left: 0;
+}
+
+.calendar-wrapper {
+  margin-top: 1.5rem;
+}
+
+.calendar-year {
+  color: rgb(120, 120, 120);
+}
+
+.calendar-month {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.calendar-days-wrapper {
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.calendar-days {
+  width: 14.28%;
+  display: inline-block;
+  height: 5rem;
+  background-color: #fff;
+}
