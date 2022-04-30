@@ -128,3 +128,42 @@ body {
   height: 5rem;
   background-color: #fff;
 }
+
+.calendar-todo-list {
+  margin-top: 0.5rem;
+}
+
+.calendar-todo-list li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0.4rem;
+}
+
+.calendar-day-of-week-wrapper {}
+
+.calendar-day-of-week-ul {
+  width: 100%;
+  margin-bottom: 1rem;
+
+}
+
+.calendar-day-of-week-ul::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.calendar-day-of-week-ul li {
+  float: left;
+  width: 14.28%;
+  font-weight: bold;
+}
+
+.calendar-day-of-week-ul li.saturday {
+  color: #1403b1;
+}
+
+.calendar-day-of-week-ul li.sunday {
+  color: red;
+}
