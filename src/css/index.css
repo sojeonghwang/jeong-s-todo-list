@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css');
 
+@font-face {
+  font-family: 'Unilab';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205-2@1.0/Unilab.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   height: 100%;
-
 }
 
 body {
@@ -96,7 +109,6 @@ body {
 .menu {
   color: #3DB2E5;
   font-size: 1.7rem;
-  margin-left: 1rem;
   vertical-align: middle;
   cursor: pointer;
   margin-top: 0.6rem;
@@ -110,11 +122,13 @@ body {
 
 .calendar-year {
   color: rgb(120, 120, 120);
+  font-family: 'GmarketSansLight';
 }
 
 .calendar-month {
   font-size: 1.8rem;
   font-weight: bold;
+  font-family: 'GmarketSansLight';
 }
 
 .calendar-days-wrapper {
@@ -125,7 +139,7 @@ body {
 .calendar-days {
   width: 14.28%;
   display: inline-block;
-  height: 5rem;
+  height: 4.5rem;
   background-color: #fff;
   overflow: hidden;
 }
@@ -140,6 +154,8 @@ body {
   overflow: hidden;
   font-size: 0.4rem;
   margin: 0.25rem 0;
+  font-family: 'Unilab';
+  font-weight: bold;
 }
 
 .calendar-day-of-week-wrapper {}
@@ -160,16 +176,16 @@ body {
   float: left;
   width: 14.28%;
   font-weight: bold;
-  color: #3DB2E5;
+  font-family: 'GmarketSansLight';
 }
 
-/* .calendar-day-of-week-ul li.saturday {
+.calendar-day-of-week-ul li.saturday {
   color: #338db5;
 }
 
 .calendar-day-of-week-ul li.sunday {
-  color: red;
-} */
+  color: #338db5;
+}
 
 .last-month-day {
   color: #ccc;
