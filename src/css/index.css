@@ -160,15 +160,16 @@ body {
   float: left;
   width: 14.28%;
   font-weight: bold;
+  color: #3DB2E5;
 }
 
-.calendar-day-of-week-ul li.saturday {
-  color: #1403b1;
+/* .calendar-day-of-week-ul li.saturday {
+  color: #338db5;
 }
 
 .calendar-day-of-week-ul li.sunday {
   color: red;
-}
+} */
 
 .last-month-day {
   color: #ccc;
