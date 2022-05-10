@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useCallback } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import CalendarHeader from '../components/calendar/CalendarHeader';
 import CalendarMonth from '../components/calendar/CalendarMonth';
 
@@ -15,10 +15,15 @@ const Calendar = () => {
         setYear(year);
     };
 
-    const getDays = () => {
+    const getDays = useCallback(() => {
         const date = new Date();
-        const month = date.getMonth();
-        setMonth(month + 1);
+        const getMonth = date.getMonth();
+        setMonth(getMonth + 1);
+    },[]);
+
+    // useMemo, useCallback 개념 다시 익히기
+    useMemo(() => {
+        const date = new Date();
         const firstDay = new Date(date.getFullYear(), month, 1);
         const lastDay = new Date(date.getFullYear(), month + 1, 0);
         const startDayOfWeekCount = firstDay.getDay() - 1 < 0 ? 6 : firstDay.getDay() - 1;
@@ -33,7 +38,15 @@ const Calendar = () => {
 
         const thisMonthDays = Array.from({ length: lastDay.getDate() }, (_, i) => i + 1);
         setThisMonthDays(thisMonthDays);
-    }
+    }, [month]);
+    
+    const moveToPrevMonth = () => {
+        setMonth(month - 1);
+    };
+
+    const moveToNextMonth = () => {
+        setMonth(month + 1);
+    };
 
     useEffect(() => {
         setYears();
@@ -43,7 +56,7 @@ const Calendar = () => {
     return (
         <div>
             <CalendarHeader year={year} />
-            <CalendarMonth thisMonthDays={thisMonthDays} emptyDays={emptyDays} month={month} />
+            <CalendarMonth moveToPrevMonth={moveToPrevMonth} moveToNextMonth={moveToNextMonth} thisMonthDays={thisMonthDays} emptyDays={emptyDays} month={month} />
         </div>
     );
 };

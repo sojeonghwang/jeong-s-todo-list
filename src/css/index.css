@@ -14,6 +14,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'GangwonEdu_OTFBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   height: 100%;
 }
@@ -107,7 +114,7 @@ body {
 }
 
 .menu {
-  color: #3DB2E5;
+  color: #338db5;
   font-size: 1.7rem;
   vertical-align: middle;
   cursor: pointer;
@@ -154,7 +161,7 @@ body {
   overflow: hidden;
   font-size: 0.4rem;
   margin: 0.25rem 0;
-  font-family: 'Unilab';
+  font-family: 'GangwonEdu_OTFBoldA';
   font-weight: bold;
 }
 
@@ -189,4 +196,12 @@ body {
 
 .last-month-day {
   color: #ccc;
+}
+
+.month-to-prev {
+  float: left;
+}
+
+.month-to-next {
+  float: right;
 }
