@@ -21,7 +21,6 @@ const Calendar = () => {
         setMonth(getMonth + 1);
     },[]);
 
-    // useMemo, useCallback 개념 다시 익히기
     useMemo(() => {
         const date = new Date();
         const firstDay = new Date(date.getFullYear(), month, 1);
@@ -41,10 +40,19 @@ const Calendar = () => {
     }, [month]);
     
     const moveToPrevMonth = () => {
+        if (month === 1) {
+            // #TODO: 추후 전년도로 넘어가는 기능 추가
+            return
+        }
+
         setMonth(month - 1);
     };
 
     const moveToNextMonth = () => {
+        if (month === 12) {
+            // #TODO: 추후 다음년도로 넘어가는 기능 추가
+            return
+        }
         setMonth(month + 1);
     };
 
