@@ -24,8 +24,9 @@ const Calendar = () => {
     useEffect(() => {
         // #TODO: 로직 수정 필요
         const date = new Date();
-        const firstDay = new Date(date.getFullYear(), month, 1);
-        const lastDay = new Date(date.getFullYear(), month + 1, 0);
+        console.log('month!!!', month)
+        const firstDay = new Date(date.getFullYear(), month - 1, 1);
+        const lastDay = new Date(date.getFullYear(), month - 2, 0);
         const startDayOfWeekCount = firstDay.getDay() - 1 < 0 ? 6 : firstDay.getDay() - 1;
         const lastMonthDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
         const lastMonthDays = [];
