@@ -21,7 +21,8 @@ const Calendar = () => {
         setMonth(getMonth + 1);
     },[]);
 
-    useMemo(() => {
+    useEffect(() => {
+        // #TODO: 로직 수정 필요
         const date = new Date();
         const firstDay = new Date(date.getFullYear(), month, 1);
         const lastDay = new Date(date.getFullYear(), month + 1, 0);
